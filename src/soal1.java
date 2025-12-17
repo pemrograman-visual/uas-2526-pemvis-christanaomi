@@ -1,5 +1,6 @@
-//Christa Naomi Silalahi-12S25041
-//Tongam Prozona Manurung-12S25007 
+// Christa Naomi Silalahi - 12S25041
+// Tongam Prozona Manurung - 12S25007
+
  * Timport java.util.*;
 import java.lang.Math;
 
