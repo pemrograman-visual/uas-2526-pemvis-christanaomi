@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Soal 5 Sistem Kelayakan Beasiswa Internal"/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-17 04:11:45 PM"/>
+        <attribute name="created" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMi0xNzswMzo1ODozMyBQTTsyNzQ4"/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMi0xNzswNDowMTo1NSBQTTsxO3VzZXI7TEFQVE9QLTRHNzE5VUNGOzIwMjUtMTItMTc7MDQ6MDE6MzkgUE07U29hbCA1LmZwcmc7NjY3MQ=="/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMi0xNzswNDoxMTo0NSBQTTsxOzI4NDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, gaji, tanggungan" type="Integer" array="False" size=""/>
+            <declare name="ipk" type="Real" array="False" size=""/>
+            <declare name="nama" type="String" array="False" size=""/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <input variable="nama"/>
+                <input variable="ipk"/>
+                <input variable="gaji"/>
+                <input variable="tanggungan"/>
+                <if expression="ipk &gt;= 3.0 &amp;&amp; gaji &lt;= 3000000">
+                    <then>
+                        <output expression="nama &amp; &quot; -&gt; Lolos Syarat Awal&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="nama &amp; &quot; -&gt; Tidak Lolos&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Jumlah lolos &quot;&amp;&quot; Total &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
