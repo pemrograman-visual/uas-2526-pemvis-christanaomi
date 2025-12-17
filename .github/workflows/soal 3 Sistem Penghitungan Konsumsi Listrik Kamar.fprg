@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="soal 3 Sistem Penghitungan Konsumsi Listrik Kamar"/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-17 03:06:37 PM"/>
+        <attribute name="created" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMi0xNzswMjoyNzowMiBQTTsyNzM5"/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMi0xNzswMjo1MDowNyBQTTsxO0FTVVM7TEFQVE9QLVZCUEhFRzRPOzIwMjUtMTItMTY7MDguMjQuNDUgUE07U29hbCAzLmZwcmc7NjU4Nw=="/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMi0xNzswMzowNjozNyBQTTsxOzI4NTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, M, j, daya, subTotal, grandTotal" type="Integer" array="False" size=""/>
+            <declare name="nama" type="String" array="False" size=""/>
+            <assign variable="grandTotal" expression="0"/>
+            <input variable="N"/>
+            <output expression="&quot;Total Konsumsi&quot;" newline="True"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <input variable="nama"/>
+                <input variable="M"/>
+                <assign variable="subTotal" expression="0"/>
+                <for variable="j" start="1" end="M" direction="inc" step="1">
+                    <input variable="daya"/>
+                    <assign variable="subTotal" expression="subTotal + daya"/>
+                </for>
+                <output expression="nama &amp; &quot; = &quot; &amp; subTotal &amp; &quot; wh&quot;" newline="True"/>
+                <assign variable="grandTotal" expression="grandTotal + subTotal"/>
+            </for>
+            <output expression="&quot;Total konsumsi kamar = &quot; &amp; grandTotal &amp; &quot; wh&quot;" newline="True"/>
+            <if expression="grandTotal &lt;= 1000">
+                <then>
+                    <output expression="&quot;Konsumsi masih dalam batas wajar.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Peringatan: Konsumsi daya berlebih!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="TotalKonsumsi" type="Integer" variable="Total">
+        <parameters>
+            <parameter name="M" type="Integer" array="False"/>
+            <parameter name="N" type="Integer" array="False"/>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="j" type="Integer" array="False"/>
+            <parameter name="subTotal" type="Integer" array="False"/>
+            <parameter name="grandTotal" type="Integer" array="False"/>
+            <parameter name="daya" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <input variable="nama"/>
+                <input variable="M"/>
+                <assign variable="subTotal" expression="0"/>
+                <for variable="j" start="1" end="M" direction="inc" step="1">
+                    <input variable="daya"/>
+                    <assign variable="subTotal" expression="subTotal + daya"/>
+                </for>
+                <output expression="nama &amp; &quot; = &quot; &amp; subTotal &amp; &quot; wh&quot;" newline="True"/>
+                <assign variable="grandTotal" expression="grandTotal + subTotal"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
